@@ -1,0 +1,7 @@
+The following libraries are neccessery to be downloaded in oder to run the app
+
+1. PyQt5
+2. Pygame
+
+
+note - put the music file for the alarm in the same directory as the app and rename it as tone.mp3 in order for the alarm function to use that file as alarm tone
