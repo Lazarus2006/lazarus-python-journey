@@ -198,7 +198,7 @@ class alarm(QWidget):
             else:
                 self.answer_input.clear()
         except ValueError:
-            self.response_label.setText("Please Enter a Valid Anwswer !")
+            self.response_label.setText("Please Enter a Valid Answer !")
 
             
 
@@ -236,6 +236,12 @@ class alarm(QWidget):
         
         self.second_label.setStyleSheet("""
             color:#0ecca0;""")
+        
+        self.hour_input.setStyleSheet("border: 2px solid cyan;color: lime;")
+        self.minute_input.setStyleSheet("border: 2px solid cyan;color: lime;")
+        self.second_input.setStyleSheet("border: 2px solid cyan;color: lime;")
+        self.answer_input.setStyleSheet("border: 2px solid #04dedc; color:green; border-radius: 10px;")
+        self.submit_answer.setStyleSheet("color: purple;")
 
 
         super().resizeEvent(event)
@@ -457,10 +463,15 @@ class Countdown(QWidget):
             color: {self.timer_color};
             font-weight: bold;
         """)
+        self.hour_input.setStyleSheet("border:2px solid lime;color:cyan;font-weight:bold;")
+        self.minute_input.setStyleSheet("border:2px solid lime;color:cyan;font-weight:bold;")
+        self.second_input.setStyleSheet("border:2px solid lime;color:cyan;font-weight:bold;")
 
 
     def style_(self):
         self.start_button.setStyleSheet("color:#0be6d0 ; font-size:25px;")
+        self.pause_button.setStyleSheet("color:#0be6d0 ; font-size:25px;")
+        self.reset_button.setStyleSheet("color:#0be6d0 ; font-size:25px;")
 
         
         
@@ -523,7 +534,7 @@ class Mainwindow(QMainWindow):
         self.Alarm_button.setStyleSheet("border:2px solid #0990d9 ; border-radius:5px ; font-size: 20px;font:Arial; font-weight:bold; color:#ebc805")
         self.Stopwatch_button.setStyleSheet("border:2px solid #0990d9 ; border-radius:5px ; font-size: 20px;font:Arial; font-weight:bold; color:#ebc805")
         self.Countdown_button.setStyleSheet("border:2px solid #0990d9 ; border-radius:5px ; font-size: 20px;font:Arial; font-weight:bold; color:#ebc805")
-    
+        self.setStyleSheet("background-color:black;")
 
 
 
